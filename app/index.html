@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <!-- build:css(.tmp) css/main.css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- endbuild -->
+  </head>
+  <body>
+    <header>
+      <input class="search-field" type="text" data-bind="textInput: searchQuery" placeholder="search...">
+    </header>
+    <section class="container">
+      <google-map class="map resizable-container" params="center: [45.0327778, 38.9769444], zoom: 14, disableDefaultUI: true, places: filteredPlaces"></google-map>
+
+      <places-list class="list resizable-container" params="places: filteredPlaces"></places-list>
+
+      <place class="place-page" params="place: selectedPlace" data-bind="visible: selectedPlace"></place>
+    </section>
+    
+    <errors params="errors: errors, modal: true"></errors>
+    
+    <script type="text/html" id="google-map.html">
+      <div id="map" class="container"></div>
+      <div class="preloader" data-bind="visible: loading">
+        <span class="preloader-message">Loading map...</span>
+      </div>
+    </script>
+    
+    <script type="text/html" id="places-list.html">
+      <ul class="places-list" data-bind="foreach: places">
+        <li class="place" data-bind="hasHighlightableMarker: $data, click: $root.goToPlace.bind($root)">
+          <h3 class="place-title" data-bind="text: title"></h3>
+          <div class="place-vicinity" data-bind="text: vicinity"></div>
+          <div class="tag-list" data-bind="foreach: $data.types">
+            <span class="place-tag" data-bind="text: $data"></span>
+          </div>
+        </li>
+      </ul>
+    </script>
+    
+    <script type="text/html" id="place.html">
+      <div class="dark-overlay" data-bind="click: $root.getOut.bind($root)"></div>
+      <div class="place-container" data-bind="with: place">
+        <street-view class="place-poster-container" params="place: $data, api: $root.streetViewAPI"></street-view>
+        <h1 class="place-page-title" data-bind="text: title"></h1>
+        <div class="place-page-vicinity" data-bind="text: vicinity"></div>
+        <span class="close" data-bind="click: $root.getOut.bind($root)">&times;</span>
+        <place-reviews class="place-reviews-container" params="place: $data, api: $root.placesAPI"></place-reviews>
+      </div>
+    </script>
+    
+    <script type="text/html" id="street-view.html">
+      <img class="place-poster" data-bind="attr: { src: posterUrl }">
+    </script>
+    
+    <script type="text/html" id="place-reviews.html">
+      <h2 class="place-reviews-title">Reviews</h2>
+      <errors params="errors: errors"></errors>
+      <ul class="place-reviews" data-bind="foreach: place.reviews">
+        <li class="place-review">
+          <p class="place-review-text" data-bind="text: text"></p>
+          <div class="place-review-info">
+            by <span class="place-review-author" data-bind="text: author_name"></span>
+            on <span class="place-review-time" data-bind="date: time"></span>
+          </div>
+        </li>
+      </ul>
+    </script>
+    
+    <script type="text/html" id="errors.html">
+      <div class="errors-container" data-bind="with: errors">
+        <ul class="errors" data-bind="foreach: $data">
+          <li class="error" data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </script>
+    
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2sDG_fSbST5gz5bT__iWjmdpGblgPNmA&sensor=true"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.2.0/knockout-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+    <!-- build:js(app) js/vendor.js -->
+    <script src="js/vendor/velocity.min.js"></script>
+    <!-- endbuild -->
+    <!-- build:js({.tmp,app}) js/scripts.js -->
+    <script type="text/javascript" src="js/map.js"></script>
+    <script type="text/javascript" src="js/place.js"></script>
+    <script type="text/javascript" src="js/apis.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

@@ -1,0 +1,484 @@
+{
+   "html_attributions" : [],
+   "next_page_token" : "CrQCJAEAAJHJjwoe7fk3XtWpsLKm4g8GTMb3gPgN0_lELGv7aJhiy3GpJhPDqaqfyboS075dE2vgVgDuXGoF6c8YnJ6PPgZLrDiQEGN68dv0HgfAp70U4IXKOIzP6L8WjRuX7o4Spxu2OKR_agRP_etti17Ix_YAmO-W1n3PeJx8l_0OEg3aTmnFw8k0ucRYIfVEFHZf04O3odkadviHT3gN9rTlJzGRHdf8-XZn5gbsffAQacasDdeURiD975x_zb-q1bn6iGSRzlAr3Rd1SK0CynByQsd2Qb1vKTrf24eTbCSFcKY0FjzVBryknHJq7VR2OXrK4yIIW2DC2mwOQbqz6vFdcBzcxnO4EXOGUGL20-VPClSkmWoqBNiFfanUqtmQu8MrgJfFU_ikCUDUDTGMLn-gtc8SEO8BJzXWY_HyNy3j5vxiy48aFDLMdGwwVq9gVWO38LT07vFU86rm",
+   "results" : [
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 45.04045,
+               "lng" : 38.976706
+            }
+         },
+         "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/bar-71.png",
+         "id" : "29306c04a999d49159999fd9bab761f104a18034",
+         "name" : "Jazz Coffee",
+         "opening_hours" : {
+            "open_now" : true,
+            "weekday_text" : []
+         },
+         "photos" : [
+            {
+               "height" : 519,
+               "html_attributions" : [],
+               "photo_reference" : "CnRnAAAAaqUy53SNisBIkeOv3A2MSgvIT9o2tpTlxOKvwYqxX6VHD8xUEZVIOyRr5U_6REh6_4VigFwfI2ioUm87cz06P6VzSy8oQqggRWFc8vrnwijWe4MGgTbGZPYo9PudBPvd0a95AX7_0NFDN66kkTNXfhIQFEX3GNiXEcNM5srRC-PkrBoUFXaYZEuBqcW_XTgaLVu2sw3lJTw",
+               "width" : 752
+            }
+         ],
+         "place_id" : "ChIJsb0RZpxP8EARatHYTlyI_Xk",
+         "rating" : 4.3,
+         "reference" : "CnRtAAAAcTIrlTLvQvdRSn7CPpt2ztHwmyjW_i8ulDC8XjPPP9Gp-7OPtN-k9a31T9rN6hhxtsWqZVg45e9HJD9m-EO7pcadR_W42x5fwQH30jmfkyeI32jYq5oQpPylDpcoKw9Tj9KINB8N6koNRayiTG6CTxIQCcw04LglxLcy_xd8AI36aBoUh2MDgtC-ZNtCuC22BjGjkexKDTw",
+         "scope" : "GOOGLE",
+         "types" : [ "night_club", "bar", "establishment" ],
+         "vicinity" : "ул. Красная, 162, Краснодар"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 45.039457,
+               "lng" : 38.986364
+            }
+         },
+         "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/fitness-71.png",
+         "id" : "aae3abf5fca2b72f01ccafc27743de7e62392caa",
+         "name" : "Orange Fitness",
+         "opening_hours" : {
+            "open_now" : false,
+            "weekday_text" : []
+         },
+         "photos" : [
+            {
+               "height" : 1224,
+               "html_attributions" : [ "От пользователя Google" ],
+               "photo_reference" : "CnRoAAAAGDEZ73XHTzw3Z5-a2kxb4_LdP_SbX9u8fI1jLcwWr0h1j3pvXQBZgGzSejAVnKPZ8IPzWyrlaJMPDSQrFI4QFuNu4J1fWdvhHRRPj0YcMElPjuUgy28ZXaGyz7s2TFv3RswgU21sKJdaObe29y9xOhIQuYDtMLA9dQNDdxD94sUPZBoU4NT8Q9VqBQ8YTDBJe0DMjUfNL78",
+               "width" : 1632
+            }
+         ],
+         "place_id" : "ChIJMcZlq5pP8EARoNp_txtQU7Q",
+         "rating" : 4.1,
+         "reference" : "CoQBcQAAAAc08VjI-Bgb9nsK2FxixxX3fZL6LWbDIxI6BgVD-DXjtY2_W4vRInrO07A0QLMXE2X3kiIrQscu7XcnZXewwwL7CPxF7SD7h8D5FS3aWEXRoh3uxHlPJkWgZVX5Oz28ZF_euvEgigAbZO_1oGmRsZG6nYOcHyd768KcESmIou5lEhC3twSMWE4CWDkSVepc0qqiGhSukz1Gmc-GP9XIs8GzoZqKK4Beqw",
+         "scope" : "GOOGLE",
+         "types" : [ "gym", "health", "establishment" ],
+         "vicinity" : "улица Леваневского, 185Б, Краснодар"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 45.036851,
+               "lng" : 38.973881
+            }
+         },
+         "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+         "id" : "326dfcf3b30090e0fcf05b0b57126db4e262a7a8",
+         "name" : "Рис",
+         "opening_hours" : {
+            "open_now" : true,
+            "weekday_text" : []
+         },
+         "photos" : [
+            {
+               "height" : 456,
+               "html_attributions" : [ "От пользователя Google" ],
+               "photo_reference" : "CnRoAAAAyOt2h1k9-_gRsiZrtDQTNRrWLq5BNkp_X6qKMPCM7wduyJvMTGEs0s0eSfmT2S3oyOMR1vXKttz09thYhxgUKWHkQOi6zNHSgSHHwsDgkEVjIeiRkKETKKcowizanqGH8y9G4YDaUqVAOW7pYasiDxIQfrCO-ky6f9DPl5twn6_r9BoUd9u5DWT2wdqjQUz9hNq2HD_wFp0",
+               "width" : 800
+            }
+         ],
+         "place_id" : "ChIJl3RUKZlP8EARTCWGvkqy7lY",
+         "rating" : 2.7,
+         "reference" : "CnRoAAAAM-T2cIFlHv29zMuOo-02E0Ra3NqUkZop7faG5r2cCyuzOKl9sdEZ6wcs0EiELi5bGnLmZzRDSBcD3tyZiCRY-ksiW5J1_Tc9wKH7VB1zMvDCMoAZWDW4pP27asXzRh9-_n4_Gtu3mrcCVT-IraMWmxIQRxaVyTwqzAwEYl9VxbjrIRoU7K088prdmuROYFipvKdu6ZngpQI",
+         "scope" : "GOOGLE",
+         "types" : [ "restaurant", "food", "establishment" ],
+         "vicinity" : "ул. Красная, 109, Краснодар"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 45.043946,
+               "lng" : 38.978118
+            }
+         },
+         "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "fda19082ee2b7152151685a5f13e5df2ec3a7606",
+         "name" : "Кавказ",
+         "opening_hours" : {
+            "open_now" : true,
+            "weekday_text" : []
+         },
+         "place_id" : "ChIJNXg23YJP8EARmZEfzyBuhRg",
+         "rating" : 3.2,
+         "reference" : "CnRuAAAA9EXCMy08Lkw_YUfFlKlpyMVDH-BzEHI9adAO3_XM_HefpqlO2GMn7KUUSAh4wB2ZI_UgRBkoY4cNvofwtvALnsHWenreRhIflLUs4Mbjdg6mHGimxkDtuUSIJQsINVmrhhT_B52mjC83bdjguuUNuhIQpKvTgGZSe3af2SET35JcFBoUNqPGuw8xF4LlNDn63gb8xIcbvlI",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "food", "establishment" ],
+         "vicinity" : "Красная улица, 174, Краснодар"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 45.048128,
+               "lng" : 38.982903
+            }
+         },
+         "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+         "id" : "13793d30cc2f393383d8b074c8950fa44175cc2a",
+         "name" : "PRO SUSHI LOFT",
+         "opening_hours" : {
+            "open_now" : true,
+            "weekday_text" : []
+         },
+         "photos" : [
+            {
+               "height" : 1424,
+               "html_attributions" : [],
+               "photo_reference" : "CnRnAAAA3QLXDJ1B-xCJRaC5llxqc-4qpRSiMjLndL7oJxfu-RbCfkpA9vLq6kMdnfZh1TsP5-Tf_DaJHOAOFgXy-UlOksGy3Is8H3DaY1SbNkYwLdwwemxRbspc8FxN2yXXrmCsWpCJwcWWIbVOU4QV9z1uwRIQz1V15rq36PY_21IF_hgB6hoUPcZu9KrEyRDe8BKuHkNrpfNEnMI",
+               "width" : 2048
+            }
+         ],
+         "place_id" : "ChIJ1YbRz4FP8EARe945T6XYrms",
+         "rating" : 3.9,
+         "reference" : "CnRwAAAARibAUyrMeqlINToofmgFZDNG5igFocAJ1Qea0u8OP8nL4aU1mX3dHjfCeUW9MTzITiLAFhCJ-p7V2V4FuGcuDrlGJfhX07kF5fxBd-Tw2Az4ko-Eu_ngBvSeBBqd78IfeoiUnLYR1bsGwU2zOHASFxIQyZkjLuCuACAV_uuNhmqAnxoUsW3yd88sHtHsiI53QBNzuWeuA2U",
+         "scope" : "GOOGLE",
+         "types" : [ "cafe", "restaurant", "food", "establishment" ],
+         "vicinity" : "улица Коммунаров, 268, Краснодар"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 45.04078,
+               "lng" : 38.974163
+            }
+         },
+         "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+         "id" : "e521764936b1e799ce8f1975b10f7d7e1174bfcb",
+         "name" : "Gray Goose, кафе",
+         "place_id" : "ChIJR3P-sZ1P8EARBiDBLzzpz-U",
+         "reference" : "CoQBdwAAABNpzs8gO7-HdyaeZ8IdD-Bd24zngLWHd_1UCl2-XUQIljwZHD-uAfDoNAT95hCTaxaNCCaflr2HQeD1-3ha1Z_DxRjYFHroqNjG4PvAYQgy3_gamnFvEVIRh9Su1Di1IhLOIcYVn4ULxuukf_CmxCEssHrDqwHn2V-ASvlrZnIjEhB0iOdBljZK0saAeaLfKixsGhQ2NO7xt2nFTJS9QwKvl-byhDOuPg",
+         "scope" : "GOOGLE",
+         "types" : [ "cafe", "food", "establishment" ],
+         "vicinity" : "Северная улица, 279, Краснодар"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 45.040482,
+               "lng" : 38.976211
+            }
+         },
+         "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+         "id" : "d10bbbbcfaa5c701a3e490ffdebc9e7c7f59d130",
+         "name" : "McDonalds",
+         "opening_hours" : {
+            "open_now" : true,
+            "weekday_text" : []
+         },
+         "photos" : [
+            {
+               "height" : 1224,
+               "html_attributions" : [ "От пользователя Google" ],
+               "photo_reference" : "CnRoAAAAMoIhRTLDRYX4FmH-ETXY30c-3e4X_zeAFHiMcBxjhmDXdobQMZtqQZT-Vfh45QJRjogFqQpIt_N6TdDRJJlCL86VbUPbWMsylR-ykjdY_PcQS_bl5ohACc2Rl0lXqFFWWH_-brg1KuOQ1XGjJc89xRIQ5MIedkUVgiqUgjZxZ9SezhoUoU3VyP3kM1MXzDkWkZo1HW2yV0w",
+               "width" : 1632
+            }
+         ],
+         "place_id" : "ChIJP0R8UZxP8EARQmv-CeGc6F8",
+         "price_level" : 1,
+         "rating" : 4.1,
+         "reference" : "CnRrAAAA7KUJecjFc6HPWhqB29JlrreRFq4GBRhzWDwoQ7oOgzQyhuhZ0hE6duoErNSsPXmjDPRWkZTgEUpB1qLJS_8sx176dWDzuMnRfld_C5yJwS7VOif2m0ZBulaSh18ojrTqPNlHP8N8-fL8_6BzlFGbyBIQG_SUKMjdjwA_6KF85vW2QxoUNPUEOSwftlxbRCwYLoGnDQXzpjE",
+         "scope" : "GOOGLE",
+         "types" : [ "restaurant", "food", "establishment" ],
+         "vicinity" : "ул. Красная, 127/1, Краснодар"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 45.032469,
+               "lng" : 38.973661
+            }
+         },
+         "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/bar-71.png",
+         "id" : "ee3c7801cacbe4cccc33bbe2aa705febc6612a09",
+         "name" : "Министерство, Бар, ООО",
+         "opening_hours" : {
+            "open_now" : true,
+            "weekday_text" : []
+         },
+         "photos" : [
+            {
+               "height" : 2592,
+               "html_attributions" : [ "От пользователя Google" ],
+               "photo_reference" : "CnRnAAAA7J8UctiDl6OdNLahn3e23mgQbtM1oSB1d8rEK24sI24kz6RjbcDTsbvaSJ_Jp7_iw-6X7GG6blm2FgpbhJeMRzPpHs8VA5c-WVyZayodPwdPJ6fOGJo-X0eNzm9YzIHQY0vPXgtkhyZtW06VRqXhhBIQn_Q6PXxp8bIVAzebG8DTABoU_cJiepYpB4prux7_0BxkvxBDb3E",
+               "width" : 3872
+            }
+         ],
+         "place_id" : "ChIJc0NFUoNP8EARxitfV65V23M",
+         "rating" : 4.1,
+         "reference" : "CpQBigAAAAGhTwwAryyJo56ANZnsSkGzuMFLUTQOyrvyi-J_aDzUazfgX9Kn4SoT5GBKewm4dw5giHs0IvN-teEL8XyiteqTiC4zi3vTDHV7F-S6Iljwlcjsg8yyJ8QGBrUHrR4ydkcS4YBMAuU6gb3ipQH0477QWGNoyH_wZSmYmPP1czcN9QiZBfmIYri7lfQEka7aeBIQYTlMPrvqIFrumIc1eEB7GBoUxelwHcRyNx6Fggr7BXoRbBZsUyg",
+         "scope" : "GOOGLE",
+         "types" : [ "bar", "establishment" ],
+         "vicinity" : "ул. Красная, 104, Краснодар"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 45.04788,
+               "lng" : 38.979381
+            }
+         },
+         "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+         "id" : "db25eede6c93fd4c0f19b9a6434024096e519237",
+         "name" : "Борщberry",
+         "opening_hours" : {
+            "open_now" : false,
+            "weekday_text" : []
+         },
+         "place_id" : "ChIJgVGfsnhP8EAR07zH5aplYN4",
+         "rating" : 4.4,
+         "reference" : "CnRwAAAAtGJS5_I6cFM3jY61xSz3My_w9jL8irkf1CRLMoWQrHtckW8wAbY-xmIbuMEcNUqRTn_aptAm7OsLUeNopYRZQl-ZCED4TptkjdJcyNBtcfE90nIwnQ7MAZL6m5IPEr_oDhfZXWL-zF_Cl50MpNyPPxIQQkpq-ZA_sdeNuGbyH7G9qRoUkJewEWgXQ2G5ZMYYud_6dcUpadA",
+         "scope" : "GOOGLE",
+         "types" : [ "restaurant", "food", "establishment" ],
+         "vicinity" : "Красная улица, 182, Краснодар"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 45.048311,
+               "lng" : 38.983087
+            }
+         },
+         "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+         "id" : "5d492c531d40df4e0b8f2cf5d3ccc0ce80a83ec6",
+         "name" : "Prima Vera",
+         "opening_hours" : {
+            "open_now" : false,
+            "weekday_text" : []
+         },
+         "photos" : [
+            {
+               "height" : 884,
+               "html_attributions" : [],
+               "photo_reference" : "CnRnAAAA2LJmN1DzHQtoc5uTgqTHbObsND3uI6e62452QiEvIPqqqhSB1m6_dsKbqADbS44eVMkliKhTA3g779hhZ2YGUFjaLwtL7oB1ZQigK9AiY3da1DUi-iJ2jZHZhQxITWKdvxk1ugxq57exhD7VWBSvexIQE_k7uzacz0cgB_P8HVXsNxoUwKp8zkev3S_mvC5en8PQUkHB_sI",
+               "width" : 1280
+            }
+         ],
+         "place_id" : "ChIJlVuUz4FP8EARnKsW03dWrek",
+         "reference" : "CnRtAAAA7AP4IArEf-BBO9RtkM0ilcZ644UsF0P35MFzREwUnUJ_Il_wKLQ3HqVGOOScxblHikgGaAdBOufXTIv95SpPb2h-WIgnUsI0-oAOZfbMKdOcvECv-0_Lw0DG72uflRdtlZaxN-2E6N6hJkWzAvYAtxIQ3lHEzSX6fgYMi6dPMgnLixoUXfU-KQch8u4juiQ8fS2NUf9wT64",
+         "scope" : "GOOGLE",
+         "types" : [ "food", "establishment" ],
+         "vicinity" : "ул. Коммунаров, 268, TЦ \"Кавказ\", Краснодар"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 45.038877,
+               "lng" : 38.986358
+            }
+         },
+         "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/bar-71.png",
+         "id" : "4978d41e6980e65a8096eadbbd8cd698b87132dc",
+         "name" : "VIP Караоке клуб Ля Мажор",
+         "opening_hours" : {
+            "open_now" : true,
+            "weekday_text" : []
+         },
+         "photos" : [
+            {
+               "height" : 348,
+               "html_attributions" : [],
+               "photo_reference" : "CnRnAAAATRXQy9fiFD8Ew_wAwDECpNOk9EkP6y3V4r5qPwtk3y7EHTj45JU3wo6F8lC5otxI9OXppT5JKpfB4ziRNBv3W-K3hhutJWOXwHyIfncmqtQwjjQyZhIS9h76zXalsIqVZQGowX7e3MFHyMWjyDBwORIQV9le09kdmQJU5XG8R0Fr7xoU9ZKNwNy8UdbT4XzJLNN1ibnhOps",
+               "width" : 675
+            }
+         ],
+         "place_id" : "ChIJt57Fp5pP8EARETNLZS4WcNY",
+         "reference" : "CpQBjgAAAL0zxcPDMqWnbW1Br7ln7envV_QESUbQDRhT4Vp5bLd2W0Upy5atHkmnPlWKIlS1ZJ9n_gz6z5aoo0zpHknwuv13luzOLAHGQzxtpUu72X7KKxtMP-Iomb4g7kvQs4VpDYr19SAgGTGtnMm4nfMuxflNY5IMb0NLiE2gT5O6jxAAdcEHdBzhvjDq2rkNqgT_3hIQFTOcjoDr3SSTCmUm2dq-gxoU55wYgMu578GEdxhoDMEU0baPcHA",
+         "scope" : "GOOGLE",
+         "types" : [ "night_club", "bar", "establishment" ],
+         "vicinity" : "Северная улица, 327, Краснодар"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 45.036497,
+               "lng" : 38.977724
+            }
+         },
+         "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/fitness-71.png",
+         "id" : "b3d4d826c272ace4a237c8c3fc4c6dbff6a562be",
+         "name" : "Форма",
+         "place_id" : "ChIJh7SKdZlP8EARSdSBZW_q1tI",
+         "reference" : "CnRtAAAANwe5cj7BMYFfyhuJDB55cuGpxBG46KrHjqJAnCAUNgZX1VwcFICE7OPXAPuCuI8EUEzcQywTAicjzb-jUuKN-NvlptG-YCVsNVF41VvppiN9PtTsn6WKr3EEpdpL_FX8xJiSvWqka7Hw4a_rp2DWaBIQ9Ak9qmyVr4F46zb9YMOyfBoUTXcDmA90aDCMHLDHFnveQ94Th_c",
+         "scope" : "GOOGLE",
+         "types" : [ "gym", "health", "establishment" ],
+         "vicinity" : "Кузнечная улица, 6, Краснодар"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 45.038603,
+               "lng" : 38.97483
+            }
+         },
+         "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+         "id" : "26df694c93e46474adbb804385dbb19b92bbc751",
+         "name" : "Wok Cafe",
+         "place_id" : "ChIJc0NFUoNP8EAR7qyMAIYOd8s",
+         "rating" : 4.5,
+         "reference" : "CnRrAAAA8Vr0OME41A5XTw2MP-pJoT-nSQ_MJoz3GWqcCb9m5oOKu00ypV3xafZZ1mK0rqmWJFSEBBFccgU_gc4E0LpJ1PgWqX6IGbmTKjgZzLTH3FgG_vX0FnVW3ZfNEsrRzzS6q4Yjlh8Vya_n8riSrJGzhBIQRM1Bab593U50z48HhKzu8xoUKLISeFVzD9BqQUwOp_sPC4K6Piw",
+         "scope" : "GOOGLE",
+         "types" : [ "cafe", "food", "establishment" ],
+         "vicinity" : "Цокольный этаж, Красная улица, 113, Краснодар"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 45.043959,
+               "lng" : 38.976619
+            }
+         },
+         "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+         "id" : "2415710c92bc0ae9df808e13dc6b164666bdffb3",
+         "name" : "Жар-пицца",
+         "opening_hours" : {
+            "open_now" : false,
+            "weekday_text" : []
+         },
+         "place_id" : "ChIJW9MrOZ1P8EARtbGcJzPU6Ew",
+         "reference" : "CoQBcwAAAG5YSx5liFPiBl6gdVy_ZbHgDHEBnLY01KDBdFjWj-RCNX1zGIvU5hIDmx2DvECNxVC-NqFSuc6qC2AqP-J3_BU7_utmPMxlN5od27lit3xixaZVZ8y60vI1pXskd3YYZGxx3_6Zxwhus2jHt46ca4NEXVcQUvk0lgnqhUvsfxiCEhCVwP6XRohpXtoqGEmsFN7oGhTksKAHiQfL-2GMWf4g5sDpgjO4YA",
+         "scope" : "GOOGLE",
+         "types" : [ "restaurant", "food", "establishment" ],
+         "vicinity" : "Красная улица, 135/1, Краснодар"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 45.034109,
+               "lng" : 38.980136
+            }
+         },
+         "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+         "id" : "7f601bd14c5006c4c6602f10711f2424f4678df2",
+         "name" : "Ресторан Thai",
+         "opening_hours" : {
+            "open_now" : false,
+            "weekday_text" : []
+         },
+         "photos" : [
+            {
+               "height" : 1024,
+               "html_attributions" : [ "От пользователя Google" ],
+               "photo_reference" : "CsQBtgAAABp0mlbnoaK2DpdOblNLCDV_XtTE1T5pCbctOW98CoZxuXEyy20nWgTNYz4S3tjQkwBeFIIsYzuNkHl6XhiIBfYVs7DzVEE3kp7MsvWKUwecfx_FcNxydbGTcHOFlWR5zbPLMoCjO3ZdYNLGV3q6H2qXGbf9vIueqguMX7hNpQM-HXexpzqB2_a62Z-QrhoLB8Biw56yf5kulpZNq8_Z2lFrxp9216SmYWeHtry5k4RN0G_nh7uo9ww-600AmacvIBIQiAHRey_KyFYJxm5P8HRoNBoUwCrHTDK2r08-fP4yKpNBhtLsD9U",
+               "width" : 768
+            }
+         ],
+         "place_id" : "ChIJD2lnd5dP8EAR8orRWNAVQQc",
+         "rating" : 4.5,
+         "reference" : "CoQBdwAAAJV25qAHy8sgc_gh6pKgAvm1QLcV1VvZ1pxzuKghwdHfxuNrTjkdm3mwgPYPIxawzjjAhJr4ojXAlre2TBQllTAR8J1H1iihAj11z2ExoV9VE-mboQl12uZ2fZbTdxeAMoDfgpfLoXDf-Lb3aNPgiSLIVLcs8QcuclTFqlU65ayEEhAiR-rq0lacvGhvTNDmXdQzGhS0GYxakqpySZrje-zzkiDKPXFGhw",
+         "scope" : "GOOGLE",
+         "types" : [ "restaurant", "food", "establishment" ],
+         "vicinity" : "улица Седина, 143, Краснодар"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 45.039719,
+               "lng" : 38.974492
+            }
+         },
+         "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+         "id" : "48fda096356e95d0a53483e23a2a4259cff8a423",
+         "name" : "Читай-город",
+         "place_id" : "ChIJ8cpnO5xP8EARfDinPPU0IRE",
+         "reference" : "CoQBdwAAACuqPYHJgm2cc2otHjKM4v69_ILgenUNY0UO55Th5oyeqRyombLFr9fgYbWl-fLf2c66-0pgR9HpfIheOHI530HzW5nnLkiIdQXkSlur4AQhsVA5JQtpDsSOFUKARBkwoW0bx15XOw_MUGxCAtNZ77dNW-s-E66BdtZIGEtGVt0pEhCpsyuQrL9jMOd8EG11_qCfGhSfTcObiir-yPQep4zV_zXQ6qVbPw",
+         "scope" : "GOOGLE",
+         "types" : [ "book_store", "store", "establishment" ],
+         "vicinity" : "улица Головатого, 313, Краснодар"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 45.042148,
+               "lng" : 38.98064
+            }
+         },
+         "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/fitness-71.png",
+         "id" : "908a2e4cf9a87bfedc31456a9a51235bced705ea",
+         "name" : "ALEX FITNESS",
+         "opening_hours" : {
+            "open_now" : false,
+            "weekday_text" : []
+         },
+         "photos" : [
+            {
+               "height" : 500,
+               "html_attributions" : [],
+               "photo_reference" : "CnRnAAAAhMzBASk5G8YJ2iHmemaQtQHxT0erTiSkbvAb47qpKVNVTFSMJ3Au9HRFz-8BCKGak6GrYp1x123_lQ8UqGUoN4JVtfeu-9-1LRqu4-v5H0sa9-hCYH6_DKZePeFTaJcoUV-84QRoAzUHrIdC3mlDjhIQQz_2gR2EGGN8YgulUlyJ5BoUYPr1DkekkvvhyE-QsTiDAZ5KpM0",
+               "width" : 667
+            }
+         ],
+         "place_id" : "ChIJ00RFUoNP8EARBp3U2FkIizY",
+         "reference" : "CnRuAAAA8eJvFPA6SQtMd7dyubI6t4YEEKLArzGnTN4KUPCstm8HQ8ZBebKWK4AngynghYs6lYyoWybmAY7di0l7bBbez7FiV2_esBuYEUJb4t25a-1kuywRu3Ay1W0Cj0WG55k9Nw2IyWnbJXsTsc787v_nRRIQb8rAEfPLcoOUuKAE3HDT-xoUhRbiI6B70aiM6p1ps3bcaQ2IkAM",
+         "scope" : "GOOGLE",
+         "types" : [ "gym", "health", "establishment" ],
+         "vicinity" : "улица Тургенева, 189, Краснодар"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 45.048046,
+               "lng" : 38.978152
+            }
+         },
+         "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+         "id" : "6a52278ad91ee94da1911b79a5e896954f7304cd",
+         "name" : "Subway",
+         "opening_hours" : {
+            "open_now" : false,
+            "weekday_text" : []
+         },
+         "place_id" : "ChIJeW6OzHhP8EARls08ubCLnyk",
+         "price_level" : 1,
+         "reference" : "CnRoAAAAjKRXmn0kIaNadnN_IPtlq9xDUlq5vV4kpcQniVSSpjLjQuK1wigYodc3caCBYuy0MkhER0pr7UY4ILRS5G3nMDtsSlk_TcXIedBK_GdFDLXAZrrMrlDLGgbJJU76N1b6tC5ZUxbfw7DjnsOmxsHWZBIQ9rkAKwjoTWHR6-AMJTNy9RoUd0-IlZ7ghlCRLvJxR98_4BCmKqE",
+         "scope" : "GOOGLE",
+         "types" : [ "restaurant", "food", "establishment" ],
+         "vicinity" : "Красная улица, 149, Краснодар"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 45.045906,
+               "lng" : 38.978599
+            }
+         },
+         "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+         "id" : "ed1cf51ec281aa9f5b546bddab592824c671ec42",
+         "name" : "VIS A VIS",
+         "opening_hours" : {
+            "open_now" : false,
+            "weekday_text" : []
+         },
+         "place_id" : "ChIJc0NFUoNP8EARqTS5RMamVPs",
+         "reference" : "CnRsAAAAKKo6mnykZ3wuxyjnKSfmYYLN0i0mlX3gaTFh-9UnqZXI0z6C50BrP7xuAJNG0NbPgaZmrw9oKxL-ekzCiGiCNFPImi2pNvq9makmnFr8Pk2MrqyyYzREM36K8qAqUkZexs6r-O_8K5FIFeM-GMdhIxIQyXhNO1FSFOwlhEvtmw6DlhoUEiNALIoGYzpM4fZ-ZgaXr2fChME",
+         "scope" : "GOOGLE",
+         "types" : [ "cafe", "food", "establishment" ],
+         "vicinity" : "Красная улица, 176к3, Краснодар"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 45.048092,
+               "lng" : 38.983144
+            }
+         },
+         "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+         "id" : "be6520d9d576122c46a3b7074664320e65477952",
+         "name" : "KFC",
+         "opening_hours" : {
+            "open_now" : false,
+            "weekday_text" : []
+         },
+         "place_id" : "ChIJf8RLwYFP8EARV-_eIxNF80M",
+         "price_level" : 1,
+         "reference" : "CnRlAAAAsxUyoDjKJl3hHoXE4jxZ5vWpm7ts-qjn-b5qb8gsRMP77tsMOaaA17lBL2c6qyjAhPXzUIaXaF4YB8UUYkJKxQI1xfDyqmzFhA_g9g3qdDAnczHH4KIsXaimXQFkQvUI3V3AnEIutYuerENIkt9l4RIQxonIwWpoNOkAwUujbh2VFhoUVXxCpjHfGW8q55_6k9vvqSbEtuQ",
+         "scope" : "GOOGLE",
+         "types" : [ "restaurant", "food", "establishment" ],
+         "vicinity" : "ул. Коммунаров, д. 268, БЦ \"Кавказ\", Краснодар"
+      }
+   ],
+   "status" : "OK"
+}
