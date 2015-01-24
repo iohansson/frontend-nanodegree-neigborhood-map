@@ -20,7 +20,7 @@
       <place class="place-page" params="place: selectedPlace" data-bind="visible: selectedPlace"></place>
     </section>
     
-    <errors params="errors: errors, modal: true"></errors>
+    <errors params="errors: errors, modal: true" data-bind="visible: anyErrors"></errors>
     
     <script type="text/html" id="google-map.html">
       <div id="map" class="container"></div>
@@ -59,8 +59,8 @@
     <script type="text/html" id="place-reviews.html">
       <h2 class="place-reviews-title">Reviews</h2>
       <errors params="errors: errors"></errors>
-      <ul class="place-reviews" data-bind="foreach: place.reviews">
-        <li class="place-review">
+      <ul class="place-reviews" data-bind="foreach: reviews">
+        <li class="place-review" data-bind="visible: text">
           <p class="place-review-text" data-bind="text: text"></p>
           <div class="place-review-info">
             by <span class="place-review-author" data-bind="text: author_name"></span>

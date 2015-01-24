@@ -19,6 +19,8 @@
   function Place(data, ctrl) {
     var self = this;
     
+    console.dir(data);
+    
     self.location = data.geometry.location;
     self.title = data.name;
     self.types = data.types;
@@ -69,7 +71,7 @@
     },
     
     createPosition: function () {
-      return new google.maps.LatLng(this.location.lat, this.location.lng);
+      return this.location;
     },
     
     animateMarker: function () {
@@ -80,25 +82,8 @@
       this.marker.setAnimation(null);
     },
     
-    initReviews: function () {
-      if (this.reviews === undefined) {
-        this.reviews = ko.observableArray([]);
-      }
-    },
-    
-    hasReviews: function () {
-      return this.reviews && this.reviews().length > 0;
-    },
-    
-    populateReviews: function (api) {
-      return api.getPlaceDetails(this);
-    },
-    
-    prepareReviews: function (api) {
-      this.initReviews();
-      if (!this.hasReviews()) {
-        return this.populateReviews(api);
-      }
+    getDetailsRequest: function () {
+      return { reference: this.googleReference };
     }
   };
   
@@ -125,6 +110,50 @@
       ko.utils.domNodeDisposal.addDisposeCallback(element, place.stopAnimatingMarker.bind(place));
     }
   };
+  
+  ko.components.register('places-list', {
+    viewModel: {
+      createViewModel: function (params, componentInfo) {
+        function PlacesListViewModel() {
+          this.places = params.places;
+        }
+
+        return new PlacesListViewModel();
+      }
+    },
+    template: { element: 'places-list.html' }
+  });
+  
+  ko.components.register('place-reviews', {
+    viewModel: {
+      createViewModel: function (params, componentInfo) {
+        function PlaceReviewsViewModel() {
+          var api = params.api;
+
+          this.place = params.place;
+          this.errors = ko.observableArray([]);
+          this.reviews = ko.observableArray([]);
+
+          api.getDetails(this.place.getDetailsRequest(), this.handleReviews.bind(this));
+        }
+
+        PlaceReviewsViewModel.prototype = {
+          constructor: PlaceReviewsViewModel,
+
+          handleReviews: function (place, status) {
+            if (status === google.maps.places.PlacesServiceStatus.OK) {
+              this.reviews(place.reviews);
+            } else {
+              this.errors.push('Unable to get reviews');
+            }
+          }
+        };
+
+        return new PlaceReviewsViewModel();
+      }
+    },
+    template: { element: 'place-reviews.html' }
+  });
   
   /* expose Place constructor */
   global.Place = Place;

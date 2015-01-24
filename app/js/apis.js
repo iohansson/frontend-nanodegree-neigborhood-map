@@ -27,7 +27,11 @@
   GooglePlaceTypes.prototype.constructor = GooglePlaceTypes;
   
   function GoogleLocation(location) {
-    ArrayParameter.call(this, location);
+    if (location instanceof google.maps.LatLng) {
+      ArrayParameter.call(this, [location.lat(), location.lng()]);
+    } else {
+      ArrayParameter.call(this, location);
+    }
   }
   
   GoogleLocation.prototype = Object.create(ArrayParameter.prototype);
@@ -37,7 +41,7 @@
     var defaults = {
       format: 'json'
     };
-    this.BASE_URL = 'https://maps.googleapis.com/maps/api/';
+    this.BASE_URL = 'https://maps.googleapis.com/maps/api';
     this.options = _.assign(defaults, this.buildOptions(options));
   }
   
@@ -68,7 +72,7 @@
     },
     
     buildQuery: function (apiMethod, params) {
-      return [this.BASE_URL, apiMethod, params.format].join('/') +
+      return _.compact([this.BASE_URL, apiMethod, params.format]).join('/') +
         this.buildParamsString(params);
     },
     
@@ -84,7 +88,7 @@
   function GooglePlaces(placeOptions) {
     var options = _.assign({}, placeOptions);
     GoogleMapsAPI.call(this, options);
-    this.BASE_URL += 'place';
+    this.BASE_URL += '/place';
   }
   
   GooglePlaces.prototype = Object.create(GoogleMapsAPI.prototype);
@@ -105,10 +109,10 @@
   function StreetView() {
     var defaults = {
       size: '600x200',
-      sensor: false
+      sensor: false,
+      format: 'streetview'
     };
     GoogleMapsAPI.call(this, defaults);
-    this.BASE_URL += 'streetview';
   }
   
   StreetView.prototype = Object.create(GoogleMapsAPI.prototype);

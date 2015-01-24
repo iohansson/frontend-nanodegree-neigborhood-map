@@ -13,7 +13,6 @@
             disableDefaultUI: params.disableDefaultUI
           });
           this.places = params.places;
-          
           this.bindMapListeners();
           this.showPlaces(this.places());
         }
@@ -73,18 +72,25 @@
           
           bindMapListeners: function () {
             this.loadListener = this.bindMapLoadListener();
+          },
+          
+          getDOMNode: function () {
+            return this.elementContainer;
           }
         };
         
         var mapViewModel = new MapViewModel(params, componentInfo.element);
         
         mapViewModel.places.subscribe(function (newPlaces) {
+          console.dir(newPlaces);
           mapViewModel.showPlaces(newPlaces);
         });
         
         mapViewModel.places.subscribe(function (oldPlaces) {
           mapViewModel.hidePlaces(oldPlaces);
         }, null, 'beforeChange');
+        
+        $(mapViewModel.getDOMNode()).trigger('map.initialized', { map: mapViewModel.getMap() });
         
         return mapViewModel;
       }

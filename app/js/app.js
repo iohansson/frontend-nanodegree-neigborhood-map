@@ -5,29 +5,50 @@
   function AppViewModel(placeOptions) {
     var self = this;
     
+    this.placesRequestOptions = placeOptions;
+    
     this.allPlaces = [];
     this.filteredPlaces = ko.observableArray([]);
     this.selectedPlace = ko.observable(null);
     this.searchQuery = ko.observable();
     this.errors = ko.observableArray([]);
+    this.anyErrors = ko.computed(function () {
+      return self.errors().length > 0;
+    });
     
     this.searchQuery.subscribe(this.filterPlaces, this);
     this.searchQuery.extend({ rateLimit: 100 });
     
-    this.placesAPI = new GooglePlaces(placeOptions);
+    this.listenForMap();
+
     this.streetViewAPI = new StreetView();
-    
-    this.placesAPI.nearbySearch().done(function (data) {
-      var places = this.createPlacesFromJSON(data.results);
-      this.allPlaces = places;
-      this.filteredPlaces(places);
-    }.bind(this)).fail(function (jqxhr, textStatus, error) {
-      this.errors.push('Unable to get places');
-    }.bind(this));
   }
   
   AppViewModel.prototype = {
     constructor: AppViewModel,
+    
+    populatePlaces: function (results, status) {
+      if (status === google.maps.places.PlacesServiceStatus.OK) {
+        var places = this.createPlacesFromJSON(results);
+        this.allPlaces = places;
+        this.filteredPlaces(places);
+      } else {
+        this.errors.push('Unable to get places');
+      }
+    },
+    
+    loadPlaces: function (map) {
+      this.placesAPI = new google.maps.places.PlacesService(map);
+      this.placesAPI.search(this.placesRequestOptions, this.populatePlaces.bind(this));
+    },
+    
+    mapInitialized: function (event, params) {
+      this.loadPlaces(params.map);
+    },
+    
+    listenForMap: function () {
+      $(document).on('map.initialized', this.mapInitialized.bind(this));
+    },
     
     goToPlace: function (place) {
       this.selectedPlace(place);
@@ -46,31 +67,16 @@
     },
     
     createPlacesFromJSON: function (json) {
-      return _.map(json, function (placeData) { return new Place(placeData); });
+      return _.map(json, function (placeData) { return new Place(placeData, this); }, this);
     }
   };
   
   function init() {
     var placeOptions = {
-      location: [45.039717, 38.974496],
-      key: 'AIzaSyA2sDG_fSbST5gz5bT__iWjmdpGblgPNmA',
+      location: new google.maps.LatLng(45.039717, 38.974496),
       radius: 1000,
-      sensor: false,
       types: ['bar', 'bakery', 'book_store', 'cafe', 'food', 'gym', 'hair_care']
     };
-    
-    ko.components.register('places-list', {
-      viewModel: {
-        createViewModel: function (params, componentInfo) {
-          function PlacesListViewModel() {
-            this.places = params.places;
-          }
-          
-          return new PlacesListViewModel();
-        }
-      },
-      template: { element: 'places-list.html' }
-    });
     
     ko.components.register('street-view', {
       viewModel: {
@@ -86,33 +92,6 @@
         }
       },
       template: { element: 'street-view.html' }
-    });
-    
-    ko.components.register('place-reviews', {
-      viewModel: {
-        createViewModel: function (params, componentInfo) {
-          function PlaceReviewsViewModel() {
-            var api = params.api,
-              apiCall;
-            
-            this.place = params.place;
-            this.errors = ko.observableArray([]);
-            
-            apiCall = this.place.prepareReviews(api);
-            
-            if (apiCall !== undefined) {
-              apiCall.done(function (details) {
-                this.reviews(details.result.reviews);
-              }.bind(this.place)).fail(function (jqXHR, textStatus, error) {
-                this.errors.push('Unable to get place reviews');
-              }.bind(this));
-            }
-          }
-          
-          return new PlaceReviewsViewModel();
-        }
-      },
-      template: { element: 'place-reviews.html' }
     });
     
     ko.components.register('errors', {
@@ -133,7 +112,8 @@
     
     ko.bindingHandlers.date = {
       init: function (element, valueAccessor) {
-        var date = new Date(valueAccessor());
+        /* we get date in seconds so we need to transform it into ms */
+        var date = new Date(valueAccessor() * 1000);
         
         $(element).text(date.toDateString());
       }
