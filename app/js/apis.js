@@ -2,6 +2,9 @@
 
 /* Depends on LoDash, jQuery */
 
+/* I've written API classes for Google Streetview and Google Places 
+   then I figured out that I had to use Places js library instead of plain API 
+   so using only Streetview from this module */
 (function (global) {
   'use strict';
   
@@ -106,6 +109,7 @@
     }
   });
   
+  /* Google Street View API*/
   function StreetView() {
     var defaults = {
       size: '600x200',
@@ -119,6 +123,7 @@
   _.assign(StreetView.prototype, {
     constructor: StreetView,
     
+    /* get image for place */
     getImageUrlFor: function (place) {
       this.setLocation(place.location);
       return this.buildQuery('', this.options);

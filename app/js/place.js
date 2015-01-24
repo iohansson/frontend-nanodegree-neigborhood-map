@@ -3,8 +3,10 @@
 (function (global) {
   'use strict';
   
+  /* images that we have for marker icons */
   var ICONS = ['bar', 'restaurant', 'bakery', 'gym', 'book_store', 'cafe', 'hair_care'];
   
+  /* checks if image exist for place type */
   function iconExist(type) {
     var i,
       iconsLength = ICONS.length;
@@ -16,10 +18,11 @@
     return false;
   }
   
+  /* Place constructor function 
+     data - response from Google Places API library
+     ctrl - application ViewModel */
   function Place(data, ctrl) {
     var self = this;
-    
-    console.dir(data);
     
     self.location = data.geometry.location;
     self.title = data.name;
@@ -40,6 +43,7 @@
       this.marker.setMap(map);
     },
     
+    /* search for appropriate icon for place */
     getIconUrl: function () {
       var i,
         types = this.types,
@@ -53,6 +57,7 @@
       return 'img/default.png';
     },
     
+    /* create marker on map for place */
     createMarker: function () {
       var newMarker = new google.maps.Marker({
         position: this.createPosition(),
@@ -82,11 +87,13 @@
       this.marker.setAnimation(null);
     },
     
+    /* prepare request object for Google Places API library to get place details */
     getDetailsRequest: function () {
       return { reference: this.googleReference };
     }
   };
   
+  /* Place component */
   ko.components.register('place', {
     viewModel: {
       createViewModel: function (params, componentInfo) {
@@ -100,6 +107,7 @@
     template: { element: 'place.html' }
   });
   
+  /* attaches listeners to animate marker on map */
   ko.bindingHandlers.hasHighlightableMarker = {
     init: function (element, valueAccessor) {
       var place = valueAccessor();
@@ -111,6 +119,7 @@
     }
   };
   
+  /* Places list component */
   ko.components.register('places-list', {
     viewModel: {
       createViewModel: function (params, componentInfo) {
@@ -124,16 +133,19 @@
     template: { element: 'places-list.html' }
   });
   
+  /* Place reviews component */
   ko.components.register('place-reviews', {
     viewModel: {
       createViewModel: function (params, componentInfo) {
         function PlaceReviewsViewModel() {
+          /* api - reference to Google Places API object */
           var api = params.api;
 
           this.place = params.place;
           this.errors = ko.observableArray([]);
           this.reviews = ko.observableArray([]);
-
+          
+          /* get place details */
           api.getDetails(this.place.getDetailsRequest(), this.handleReviews.bind(this));
         }
 
