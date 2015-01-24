@@ -66,7 +66,6 @@ module.exports = function (grunt) {
         src: [
           '<%= appConfig.dist %>/js/{,*/}*.js',
           '<%= appConfig.dist %>/css/{,*/}*.css',
-          '<%= appConfig.dist %>/img/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
           '<%= appConfig.dist %>/css/fonts/*'
         ]
       }
@@ -208,7 +207,6 @@ module.exports = function (grunt) {
     'concurrent:dist',
     'autoprefixer',
     'concat',
-    'ngAnnotate',
     'copy:dist',
     'cssmin',
     'uglify',

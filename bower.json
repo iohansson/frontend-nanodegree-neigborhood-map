@@ -1,0 +1,23 @@
+{
+  "name": "frontend-nanodegree-neighborhood-map",
+  "version": "0.0.1",
+  "homepage": "https://github.com/iohansson/frontend-nanodegree-neighborhood-map",
+  "authors": [
+    "iohansson <w.iohansson@gmail.com>"
+  ],
+  "description": "Udacity nanodegree project",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "knockoutjs": "~3.2.0",
+    "jquery": "~2.1.3",
+    "lodash": "~2.4.1",
+    "velocity": "~1.2.1"
+  }
+}
