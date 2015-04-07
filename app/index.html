@@ -52,6 +52,7 @@
         <div class="place-page-vicinity" data-bind="text: vicinity"></div>
         <span class="close" data-bind="click: $root.getOut.bind($root)">&times;</span>
         <place-reviews class="place-reviews-container" params="place: $data, api: $root.placesAPI"></place-reviews>
+        <flickr class="flickr-container" params="place: $data, api: $root.flickr"></flickr>
       </div>
     </script>
     
@@ -72,7 +73,18 @@
         </li>
       </ul>
     </script>
+
+    <script type="text/html" id="flickr.html">
+      <h2 class="flickr-title">Similar places on the same latitude</h2>
+      <div class="flickr-images" data-bind="foreach: photos">
+        <flickr-image params="photo: $data, api: $root.flickr"></flickr-image>
+      </div>
+    </script>
     
+    <script type="text/html" id="flickr-image.html">
+      <img class="flickr-image" data-bind="attr: { src: url }">
+    </script>
+
     <script type="text/html" id="errors.html">
       <div class="errors-container" data-bind="with: errors">
         <ul class="errors" data-bind="foreach: $data">
@@ -82,14 +94,15 @@
     </script>
     
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyA2sDG_fSbST5gz5bT__iWjmdpGblgPNmA&sensor=false"></script>
-    <!-- build:js(.) js/vendor.js -->
+    <!-- build:js(app) js/vendor.js -->
     <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/knockoutjs/dist/knockout.js"></script>
-    <script src="bower_components/lodash/dist/lodash.compat.js"></script>
-    <script src="bower_components/velocity/velocity.js"></script>
-    <script src="bower_components/velocity/velocity.ui.js"></script>
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/knockoutjs/dist/knockout.js"></script>
+    <script src="../bower_components/lodash/dist/lodash.compat.js"></script>
+    <script src="../bower_components/velocity/velocity.js"></script>
+    <script src="../bower_components/velocity/velocity.ui.js"></script>
     <!-- endbower -->
+    <script src="../node_modules/flickrapi/browser/flickrapi.js"></script>
     <!-- endbuild -->
     <!-- build:js({.tmp,app}) js/scripts.js -->
     <script type="text/javascript" src="js/map.js"></script>

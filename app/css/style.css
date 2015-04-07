@@ -169,6 +169,15 @@ header {
     font-style: italic;
   }
 
+  .flickr-title {
+    margin-left: 1em;
+  }
+    .flickr-image {
+      width: 30%;
+      margin: 1em 10%;
+      float: left;
+    }
+
 .close {
   display: block;
   background-color: #ccc;
