@@ -1,19 +1,19 @@
 'use strict';
 
 module.exports = function (grunt) {
-  
+
   require('load-grunt-tasks')(grunt);
-  
+
   require('time-grunt')(grunt);
-  
+
   var appConfig = {
     app: 'app',
     dist: 'dist'
   };
-  
+
   grunt.initConfig({
     appConfig: appConfig,
-    
+
     jshint: {
       options: {
         jshintrc: '.jshintrc',
@@ -26,7 +26,7 @@ module.exports = function (grunt) {
         ]
       }
     },
-    
+
     clean: {
       dist: {
         files: [{
@@ -39,7 +39,7 @@ module.exports = function (grunt) {
         }]
       }
     },
-    
+
     autoprefixer: {
       options: {
         browsers: ['last 2 versions']
@@ -53,14 +53,14 @@ module.exports = function (grunt) {
         }]
       }
     },
-    
+
     wiredep: {
       app: {
         src: ['<%= appConfig.app %>/index.html'],
         ignorePath: /\.\.\//
       }
     },
-    
+
     filerev: {
       dist: {
         src: [
@@ -70,7 +70,7 @@ module.exports = function (grunt) {
         ]
       }
     },
-    
+
     useminPrepare: {
       html: '<%= appConfig.app %>/index.html',
       options: {
@@ -86,7 +86,7 @@ module.exports = function (grunt) {
         }
       }
     },
-    
+
     usemin: {
       html: ['<%= appConfig.dist %>/**/*.html'],
       css: ['<%= appConfig.dist %>/css/**/*.css'],
@@ -95,7 +95,7 @@ module.exports = function (grunt) {
         assetsDirs: ['<%= appConfig.dist %>', '<%= appConfig.dist %>/img']
       }
     },
-    
+
     cssmin: {
       dist: {
         files: {
@@ -105,7 +105,7 @@ module.exports = function (grunt) {
         }
       }
     },
-    
+
     uglify: {
       dist: {
         files: {
@@ -115,11 +115,11 @@ module.exports = function (grunt) {
         }
       }
     },
-    
+
     concat: {
       dist: {}
     },
-    
+
     imagemin: {
       dist: {
         files: [{
@@ -130,7 +130,7 @@ module.exports = function (grunt) {
         }]
       }
     },
-    
+
     svgmin: {
       dist: {
         files: [{
@@ -141,7 +141,7 @@ module.exports = function (grunt) {
         }]
       }
     },
-    
+
     htmlmin: {
       dist: {
         options: {
@@ -159,7 +159,7 @@ module.exports = function (grunt) {
         }]
       }
     },
-    
+
     copy: {
       dist: {
         files: [{
@@ -190,16 +190,30 @@ module.exports = function (grunt) {
         src: ['css/*.css']
       }
     },
-    
+
     concurrent: {
       dist: [
         'copy:styles',
         'imagemin',
         'svgmin'
       ]
+    },
+    buildcontrol: {
+      options: {
+        dir: 'dist',
+        commit: true,
+        push: true,
+        message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+      },
+      pages: {
+        options: {
+          remote: 'git@github.com:iohansson/frontend-nanodegree-neighborhood-map.git',
+          branch: 'gh-pages'
+        }
+      }
     }
   });
-  
+
   grunt.registerTask('build', [
     'clean:dist',
     'wiredep',
