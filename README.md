@@ -1,4 +1,4 @@
-To view the application visit its [GitHub Page](http://iohansson.github.io/frontend-nanodegree-neighborhood-map/dist/)
+To view the application visit its [GitHub Page](http://iohansson.github.io/frontend-nanodegree-neighborhood-map/)
 
 You can also run it locally, clone the repository
 
