@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
     <!-- build:css(.tmp) css/main.css -->
     <link rel="stylesheet" href="css/style.css">
     <!-- endbuild -->
@@ -19,19 +19,19 @@
 
       <place class="place-page" params="place: selectedPlace" data-bind="visible: selectedPlace"></place>
     </section>
-    
+
     <errors params="errors: errors, modal: true" data-bind="visible: anyErrors"></errors>
-    
-    
+
+
     <!-- component templates -->
-    
+
     <script type="text/html" id="google-map.html">
       <div id="map" class="container"></div>
       <div class="preloader" data-bind="visible: loading">
         <span class="preloader-message">Loading map...</span>
       </div>
     </script>
-    
+
     <script type="text/html" id="places-list.html">
       <ul class="places-list" data-bind="foreach: places">
         <li class="place" data-bind="hasHighlightableMarker: $data, click: $root.goToPlace.bind($root)">
@@ -43,7 +43,7 @@
         </li>
       </ul>
     </script>
-    
+
     <script type="text/html" id="place.html">
       <div class="dark-overlay" data-bind="click: $root.getOut.bind($root)"></div>
       <div class="place-container" data-bind="with: place">
@@ -55,11 +55,11 @@
         <flickr class="flickr-container" params="place: $data, api: $root.flickr"></flickr>
       </div>
     </script>
-    
+
     <script type="text/html" id="street-view.html">
       <img class="place-poster" data-bind="attr: { src: posterUrl }">
     </script>
-    
+
     <script type="text/html" id="place-reviews.html">
       <h2 class="place-reviews-title">Reviews</h2>
       <errors params="errors: errors"></errors>
@@ -80,7 +80,7 @@
         <flickr-image params="photo: $data, api: $root.flickr"></flickr-image>
       </div>
     </script>
-    
+
     <script type="text/html" id="flickr-image.html">
       <img class="flickr-image" data-bind="attr: { src: url }">
     </script>
@@ -92,7 +92,7 @@
         </ul>
       </div>
     </script>
-    
+
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyA2sDG_fSbST5gz5bT__iWjmdpGblgPNmA&sensor=false"></script>
     <!-- build:js(app) js/vendor.js -->
     <!-- bower:js -->
