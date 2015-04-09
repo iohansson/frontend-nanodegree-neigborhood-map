@@ -4,3 +4,4 @@ lodash.com
 jquery.com
 https://developers.google.com/maps/documentation/javascript/
 https://developers.google.com/maps/documentation/streetview/index
+https://www.flickr.com/services/api/
