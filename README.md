@@ -1,2 +1,0 @@
-frontend-nanodegree-neigborhood-map
-===================================
