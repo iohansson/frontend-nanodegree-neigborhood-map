@@ -207,7 +207,7 @@ module.exports = function (grunt) {
       },
       pages: {
         options: {
-          remote: 'iohansson@github.com:iohansson/frontend-nanodegree-neighborhood-map.git',
+          remote: 'git@github.com:iohansson/frontend-nanodegree-neighborhood-map.git',
           branch: 'gh-pages'
         }
       }
