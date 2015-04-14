@@ -10,6 +10,10 @@ then go to folder where you've cloned the repository
 
 if you don't have [Node](http://nodejs.org/) installed, install it. Then run
 
+`npm install && bower install`
+
+and then
+
 `grunt serve:dist`
 
 to run built application or
