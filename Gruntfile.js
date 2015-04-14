@@ -14,6 +14,36 @@ module.exports = function (grunt) {
   grunt.initConfig({
     appConfig: appConfig,
 
+    connect: {
+      options: {
+        port: 9000,
+        // Change this to '0.0.0.0' to access the server from outside.
+        hostname: 'localhost',
+        livereload: 35729
+      },
+      livereload: {
+        options: {
+          open: true,
+          middleware: function (connect) {
+            return [
+              connect.static('.tmp'),
+              connect().use(
+                '/bower_components',
+                connect.static('./bower_components')
+              ),
+              connect.static(appConfig.app)
+            ];
+          }
+        }
+      },
+      dist: {
+        options: {
+          open: true,
+          base: '<%= appConfig.dist %>'
+        }
+      }
+    },
+
     jshint: {
       options: {
         jshintrc: '.jshintrc',
@@ -37,7 +67,8 @@ module.exports = function (grunt) {
             '!<%= appConfig.dist %>/.git{,*/}*'
           ]
         }]
-      }
+      },
+      server: '.tmp'
     },
 
     autoprefixer: {
@@ -192,6 +223,9 @@ module.exports = function (grunt) {
     },
 
     concurrent: {
+      server: [
+        'copy:styles'
+      ],
       dist: [
         'copy:styles',
         'imagemin',
@@ -213,7 +247,19 @@ module.exports = function (grunt) {
       }
     }
   });
+  grunt.registerTask('serve', 'Compile then start a connect web server', function (target) {
+    if (target === 'dist') {
+      return grunt.task.run(['build', 'connect:dist:keepalive']);
+    }
 
+    grunt.task.run([
+      'clean:server',
+      'wiredep',
+      'concurrent:server',
+      'autoprefixer',
+      'connect:livereload'
+    ]);
+  });
   grunt.registerTask('build', [
     'clean:dist',
     'wiredep',
