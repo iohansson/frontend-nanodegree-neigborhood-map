@@ -14,6 +14,38 @@ module.exports = function (grunt) {
   grunt.initConfig({
     appConfig: appConfig,
 
+    watch: {
+      bower: {
+        files: ['bower.json'],
+        tasks: ['wiredep']
+      },
+      js: {
+        files: [
+          '<%= appConfig.app %>/js/{,*/}*.js'
+        ],
+        options: {
+          livereload: '<%= connect.options.livereload %>'
+        }
+      },
+      styles: {
+        files: ['<%= appConfig.app %>/css/{,*/}*.css'],
+        tasks: ['newer:copy:styles', 'autoprefixer']
+      },
+      gruntfile: {
+        files: ['Gruntfile.js']
+      },
+      livereload: {
+        options: {
+          livereload: '<%= connect.options.livereload %>'
+        },
+        files: [
+          '<%= appConfig.app %>/index.html',
+          '.tmp/css/{,*/}*.css',
+          '<%= appConfig.app %>/img/**/*.{png,jpg,jpeg,gif,webp,svg}'
+        ]
+      }
+    },
+
     connect: {
       options: {
         port: 9000,
@@ -257,7 +289,8 @@ module.exports = function (grunt) {
       'wiredep',
       'concurrent:server',
       'autoprefixer',
-      'connect:livereload'
+      'connect:livereload',
+      'watch'
     ]);
   });
   grunt.registerTask('build', [
