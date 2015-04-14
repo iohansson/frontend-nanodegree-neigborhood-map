@@ -10,8 +10,10 @@ then go to folder where you've cloned the repository
 
 if you don't have [Node](http://nodejs.org/) installed, install it. Then run
 
-`npm start`
+`grunt serve:dist`
 
-then open your browser and open
+to run built application or
 
-`localhost:8000/app`
+`grunt serve`
+
+to run development version
